@@ -97,6 +97,8 @@ event system_boot(major, minor, patch, build, ll_version, protocol_version, hw)
   call gap_set_adv_parameters(20, 32, 7)
   call gap_set_adv_data(0, 26, adv_data(0:26))
   call gap_set_mode(gap_user_data, gap_undirected_connectable)
+	call sm_set_bondable_mode(1)
+
 
   # TODO: consider bonding for faster reconnect
 
